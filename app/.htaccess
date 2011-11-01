@@ -3,3 +3,8 @@
     RewriteRule    ^$    webroot/    [L]
     RewriteRule    (.*) webroot/$1    [L]
  </IfModule>
+
+AuthUserFile .htpasswda
+AuthName "Title"
+AuthType Basic
+Require valid-user 
