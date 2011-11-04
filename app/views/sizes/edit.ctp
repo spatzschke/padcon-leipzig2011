@@ -1,9 +1,36 @@
+<script>	
+	function setNameField() {
+			var height = $('#SizeHeight').val();
+			var width = $('#SizeWidth').val();
+			var depth = $('#SizeDepth').val();
+			var inner = $('#SizeInner').val();
+			var outer = $('#SizeOuter').val();
+			
+			if(height != '' || width != '' || depth != '') {
+				$('#SizeName').val(height + 'x' + width + 'x' + depth + 'cm');
+			}
+			
+			if(outer != '' && width != '') {
+				$('#SizeName').val( 'Ø' + outer + 'x' + width + 'cm');
+			}
+			
+			if(outer != '' && inner != '') {
+				if(height != '') {
+					$('#SizeName').val( 'AØ' + outer + 'cm, IØ' + inner + 'cm, Höhe ' + height + 'cm');
+				} else {
+					$('#SizeName').val( 'AØ' + outer + 'cm, IØ' + inner + 'cm');
+				}
+			}
+	}
+	
+</script>
 <div class="sizes form">
 <?php echo $this->Form->create('Size');?>
 	<fieldset>
 		<legend><?php __('Edit Size'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
+		echo $this->Form->input('name');
 		echo $this->Form->input('height');
 		echo $this->Form->input('width');
 		echo $this->Form->input('depth');
