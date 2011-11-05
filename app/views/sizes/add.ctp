@@ -7,7 +7,7 @@
 			var outer = $('#SizeOuter').val();
 			
 			if(height != '' || width != '' || depth != '') {
-				$('#SizeName').val(height + 'x' + width + 'x' + depth + 'cm');
+				$('#SizeName').val(depth + 'x' + width + 'x' + height + 'cm');
 			}
 			
 			if(outer != '' && width != '') {
@@ -38,9 +38,9 @@
         
 	<?php
 		echo $this->Form->input('name', array("label"=>"Name", "disabled"=>"disabled"));
-		echo $this->Form->input('height', array("onkeyup"=>"javascript:setNameField();"));
-		echo $this->Form->input('width', array("onkeyup"=>"javascript:setNameField();"));
-		echo $this->Form->input('depth', array("onkeyup"=>"javascript:setNameField();"));
+		echo $this->Form->input('height', array("label"=>"Höhe", "onkeyup"=>"javascript:setNameField();"));
+		echo $this->Form->input('width', array("label"=>"Länge", "onkeyup"=>"javascript:setNameField();"));
+		echo $this->Form->input('depth', array("label"=>"Breite", "onkeyup"=>"javascript:setNameField();"));
 		echo $this->Form->input('inner', array("onkeyup"=>"javascript:setNameField();"));
 		echo $this->Form->input('outer', array("onkeyup"=>"javascript:setNameField();"));
 	?>
