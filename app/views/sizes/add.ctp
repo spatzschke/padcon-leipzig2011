@@ -37,7 +37,7 @@
     
         
 	<?php
-		echo $this->Form->input('name', array("label"=>"Name", "disabled"=>"disabled"));
+		echo $this->Form->input('name', array("label"=>"Name"));
 		echo $this->Form->input('height', array("label"=>"Höhe", "onkeyup"=>"javascript:setNameField();"));
 		echo $this->Form->input('width', array("label"=>"Länge", "onkeyup"=>"javascript:setNameField();"));
 		echo $this->Form->input('depth', array("label"=>"Breite", "onkeyup"=>"javascript:setNameField();"));
