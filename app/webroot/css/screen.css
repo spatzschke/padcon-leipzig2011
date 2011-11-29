@@ -1,0 +1,216 @@
+/**
+ *
+ * Generic CSS for padcon-leipzig.de 2011
+ *
+ */
+ 
+body {
+	background: url(../img/layout/bg_high.png) 0 0 transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #f79433;
+}
+
+#navigationBandage {
+	position: absolute;
+	top: 270px;
+	height: 80px;
+	width: 100%; 
+	background-color: #346AA6;
+}
+
+#footerBandage {
+    background-color: #346AA6;
+    bottom: 50px;
+    height: 35px;
+    position: absolute;
+    width: 100%;
+}
+ 
+#container {
+	
+	position: relative;
+	width: 1004px;
+	margin: 0 auto;	
+}
+
+
+#header {
+	background: url(../img/layout/bg_header.png) 0 0 transparent;
+	height: 271px;
+	color: #346AA6;
+	margin-top: 20px;
+}
+
+#header .lettering {
+	background: url("../img/layout/h_lettering.png") repeat scroll 0 0 transparent;
+    height: 87px;
+    left: 50px;
+    position: absolute;
+    top: 145px;
+    width: 518px;	
+}
+
+#header .logo {
+	background: url("../img/layout/h_logo.png") no-repeat scroll 250px 0 transparent;
+    font-family: Arial;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: bold;
+    height: 141px;
+    padding-top: 10px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 522px;
+}
+
+#header .caption {
+   font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    top: 240px;
+}
+
+#topNavigation {
+	background: url(../img/layout/bg_border_trans.png) repeat-y 0 0 transparent;
+	padding: 0 18px;
+    width: 968px;
+	height: 80px;	
+}	
+
+#topNavigation .bgColor{
+	background-color: #346AA6;
+    height: 100%;
+    width: 100%;
+	position: relative;	
+}
+
+#topNavigation ul {
+	height: 100%;
+	position: absolute;
+}
+
+#topNavigation li {
+	display: inline;
+	height: 114px;
+	
+		
+}
+
+#topNavigation a {
+	width: 200px;
+	height: 114px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+		
+}
+
+#topNavigation a > div {
+	float: left;
+	width: 110px;	
+}
+
+#topNavigation a .image {
+	height: 114px;
+	width: 114px;
+	background: url(../img/layout/n_buttons.png) repeat-y 0 0 transparent;
+}
+
+#topNavigation a.product .image {
+	background-position: 0px 0px;
+}
+
+#topNavigation a.catalog .image {
+	background-position: -122px 0px;
+}
+
+#topNavigation a.partner .image {
+	background-position: -244px 0px;
+}
+
+#topNavigation a.product:hover .image {
+	background-position: 0px 0px;
+}
+
+#topNavigation a.catalog:hover .image {
+	background-position: -122px 0px;
+}
+
+#topNavigation a.partner:hover .image {
+	background-position: -244px 0px;
+}
+
+#topNavigation a .linkText {
+	margin-left: 5px;
+    margin-top: 40px;
+}
+
+#topNavigation a:hover .linkText {
+	color: #f79433;
+}
+
+#content {
+	background: url(../img/layout/bg_border.png) repeat-y 0 0 transparent;
+	padding-top: 60px;
+}
+
+
+#footer {
+	background: url(../img/layout/bg_footer.png) repeat-y 0 0 transparent;	
+	height: 80px;
+	padding: 0 18px;
+    width: 968px;
+}
+
+#footer .footerContent{
+	background-color: #346AA6;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	height: 15px;
+	width: 948;
+	padding: 10px;
+}
+
+#footer .footerContent > *{
+	float: left; 
+}
+
+#footer a{
+	float: left;
+	color: #FFFFFF;
+	margin: 0 10px;
+}
+
+#footer a:hover{
+	color: #f79433;
+}
+
+#footer .copyright{
+	float: right;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+div.form, div.index, div.view {
+	overflow: auto;	
+}
