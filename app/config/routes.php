@@ -32,3 +32,16 @@
  * ...and connect the rest of 'Pages' controller's urls.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	
+//Nav Routes
+	
+	Router::connect('/Produkte', array('controller' => 'Categories', 'action' => 'overview'));
+	Router::connect('/Kataloge', array('controller' => 'Catalogs', 'action' => 'overview'));
+	Router::connect('/Partner', array('controller' => 'PartnerCategories', 'action' => 'overview'));
+	
+//Footer Routes
+	
+	Router::connect('/Kontakt', array('controller' => 'siteContents', 'action' => 'contact'));
+	Router::connect('/Uber_uns', array('controller' => 'siteContents', 'action' => 'about'));
+	Router::connect('/AGB', array('controller' => 'siteContents', 'action' => 'agb'));
+	Router::connect('/Impressum', array('controller' => 'siteContents', 'action' => 'imprint'));

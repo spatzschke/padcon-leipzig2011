@@ -220,7 +220,8 @@ a:hover {
 	width: 270px;
 	height: 80px;
 	float: left;
-	font-size: 18px;	
+	font-size: 18px;
+	padding: 32px 0px;	
 }
 
 .categoryItem .text{
@@ -236,38 +237,48 @@ a:hover {
 
 a .categoryItemLeft {
 	margin: 0 30px;
-	padding: 32px 5px 32px 100px;
+	padding-right: 5px;
+	padding-left: 100px;
 }
 
-a:hover .categoryItemLeft {
-	color: #000000;	
+a:hover .categoryItemLeft, a:hover .categoryItemRight {
+	color: #003D4C;	
 }
 
-a .categoryItemRight {
-	padding: 32px 100px 32px 5px;	
+a .categoryItemRight {	
+	padding-right: 100px;
+	padding-left: 5px;
 }
 
-a:hover .categoryItemRight {
-	color: #000000;	
-}
+#categories a .categoryItemLeft { background:url(../img/btn_category/btn_category_left.png) no-repeat 0 0 transparent;	 }
+#categories a:hover .categoryItemLeft { background:url(../img/btn_category/btn_category_left_a.png) no-repeat 0 0 transparent; }
+#categories a .categoryItemRight { background:url(../img/btn_category/btn_category_right.png) no-repeat 0 0 transparent; }
+#categories a:hover .categoryItemRight { background:url(../img/btn_category/btn_category_right_a.png) no-repeat 0 0 transparent; }
 
-#categories a .categoryItemLeft { background:url(../img/btn_category_left.png) no-repeat 0 0 transparent;	 }
+#partnerCategories a .categoryItemLeft { background:url(../img/btn_partner/btn_partner_left.png) no-repeat 0 0 transparent; }
+#partnerCategories a:hover .categoryItemLeft { background:url(../img/btn_partner/btn_partner_left_b.png) no-repeat 0 0 transparent; }
+#partnerCategories a .categoryItemRight { background:url(../img/btn_partner/btn_partner_right.png) no-repeat 0 0 transparent;	}
+#partnerCategories a:hover .categoryItemRight { background:url(../img/btn_partner/btn_partner_right_b.png) no-repeat 0 0 transparent; }
+#partnerCategories #c6 .text { margin-top: 8px; }
 
-#categories a:hover .categoryItemLeft { background:url(../img/btn_category_left_a.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-physio { background:url(../img/btn_catalog/btn_catalog_physio_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-physio { background:url(../img/btn_catalog/btn_catalog_physio.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-pflege { background:url(../img/btn_catalog/btn_catalog_pflege_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-pflege { background:url(../img/btn_catalog/btn_catalog_pflege.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-intensiv { background:url(../img/btn_catalog/btn_catalog_its_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-intensiv { background:url(../img/btn_catalog/btn_catalog_its.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-op { background:url(../img/btn_catalog/btn_catalog_op_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-op { background:url(../img/btn_catalog/btn_catalog_op.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-rontgen { background:url(../img/btn_catalog/btn_catalog_rontgen_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-rontgen { background:url(../img/btn_catalog/btn_catalog_rontgen.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-notfall { background:url(../img/btn_catalog/btn_catalog_notfall_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-notfall { background:url(../img/btn_catalog/btn_catalog_notfall.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-baby { background:url(../img/btn_catalog/btn_catalog_baby_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-baby { background:url(../img/btn_catalog/btn_catalog_baby.png) no-repeat 0 0 transparent; }
+#catalogs a:hover .categoryItem-funktion { background:url(../img/btn_catalog/btn_catalog_funktion_a.png) no-repeat 0 0 transparent; }
+#catalogs a .categoryItem-funktion { background:url(../img/btn_catalog/btn_catalog_funktion.png) no-repeat 0 0 transparent; }
+#catalogs .categoryItem { padding-top: 18px; padding-bottom: 18px; line-height: 150%;}
 
-#categories a .categoryItemRight { background:url(../img/btn_category_right.png) no-repeat 0 0 transparent; }
-
-#categories a:hover .categoryItemRight { background:url(../img/btn_category_right_a.png) no-repeat 0 0 transparent; }
-
-#partnerCategories a .categoryItemLeft { background:url(../img/btn_partner_left.png) no-repeat 0 0 transparent; }
-
-#partnerCategories a:hover .categoryItemLeft { background:url(../img/btn_partner_left_b.png) no-repeat 0 0 transparent; }
-
-#partnerCategories a .categoryItemRight { background:url(../img/btn_partner_right.png) no-repeat 0 0 transparent;	}
-
-#partnerCategories a:hover .categoryItemRight { background:url(../img/btn_partner_right_b.png) no-repeat 0 0 transparent; }
-
-#partnerCategories #c6 .text { margin-top: 8px; };
 
 
 div.form, div.index, div.view {
