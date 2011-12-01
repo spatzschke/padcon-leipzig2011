@@ -3,11 +3,12 @@
  * Generic CSS for padcon-leipzig.de 2011
  *
  */
- 
+
 body {
 	background: url(../img/layout/bg_high.png) 0 0 transparent;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 150%;
 	color: #000000;
 	position: relative;
 }
@@ -19,6 +20,7 @@ a {
 a:hover {
 	color: #f79433;
 }
+
 
 #navigationBandage {
 	position: absolute;
@@ -67,11 +69,15 @@ a:hover {
     font-style: italic;
     font-weight: bold;
     height: 141px;
-    padding-top: 10px;
+    padding-top: 30px;
     position: absolute;
     right: 50px;
     top: 50px;
     width: 522px;
+}
+
+#header a, #header a:hover {
+	color: #346AA6;
 }
 
 #header .caption {
@@ -164,9 +170,8 @@ a:hover {
 
 #content {
 	background: url(../img/layout/bg_border.png) repeat-y 0 0 transparent;
-	padding-top: 60px;
+	padding: 60px 80px 20px;
 }
-
 
 #footer {
 	background: url(../img/layout/bg_footer.png) repeat-y 0 0 transparent;	
@@ -180,7 +185,7 @@ a:hover {
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: bold;
-	height: 15px;
+	height: 20px;
 	width: 948;
 	padding: 10px;
 }
@@ -205,10 +210,64 @@ a:hover {
 }
 
 
+#news p.contentParagraph {
+	background: url("../img/horizontal_devider.png") no-repeat scroll 0 0 transparent;
+    padding: 20px;
+    text-align: center;	
+}
 
+.categoryItem {
+	width: 270px;
+	height: 80px;
+	float: left;
+	font-size: 18px;	
+}
 
+.categoryItem .text{
+	width: 260px;
+	text-align: center;
+}
 
+#partnerCategories a .categoryItem {
+	padding-top: 23px;
+	height: 90px;
+	
+}
 
+a .categoryItemLeft {
+	margin: 0 30px;
+	padding: 32px 5px 32px 100px;
+}
+
+a:hover .categoryItemLeft {
+	color: #000000;	
+}
+
+a .categoryItemRight {
+	padding: 32px 100px 32px 5px;	
+}
+
+a:hover .categoryItemRight {
+	color: #000000;	
+}
+
+#categories a .categoryItemLeft { background:url(../img/btn_category_left.png) no-repeat 0 0 transparent;	 }
+
+#categories a:hover .categoryItemLeft { background:url(../img/btn_category_left_a.png) no-repeat 0 0 transparent; }
+
+#categories a .categoryItemRight { background:url(../img/btn_category_right.png) no-repeat 0 0 transparent; }
+
+#categories a:hover .categoryItemRight { background:url(../img/btn_category_right_a.png) no-repeat 0 0 transparent; }
+
+#partnerCategories a .categoryItemLeft { background:url(../img/btn_partner_left.png) no-repeat 0 0 transparent; }
+
+#partnerCategories a:hover .categoryItemLeft { background:url(../img/btn_partner_left_b.png) no-repeat 0 0 transparent; }
+
+#partnerCategories a .categoryItemRight { background:url(../img/btn_partner_right.png) no-repeat 0 0 transparent;	}
+
+#partnerCategories a:hover .categoryItemRight { background:url(../img/btn_partner_right_b.png) no-repeat 0 0 transparent; }
+
+#partnerCategories #c6 .text { margin-top: 8px; };
 
 
 div.form, div.index, div.view {

@@ -43,7 +43,7 @@
 	<div id="container">
 		<div id="header">
 			<div class="lettering"></div>
-            <div class="logo">padcon</div>
+            <?php echo $this->Html->link('<div class="logo">padcon</div>','/Products/', array('escape'=>false)); ?>
             <div class="caption">Fachhandel und Service für medizinische Einrichtungen</div>
 		</div>
         <div id="topNavigation">
