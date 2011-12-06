@@ -39,7 +39,7 @@ class SiteContentsController extends AppController {
 	}
 
 	function edit($id = null) {
-		$file = new File(CSS . 'cms.css', false, 0777);
+		$file = new File(CSS . 'cms.css', true, 0777);
 		
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid site content', true));
