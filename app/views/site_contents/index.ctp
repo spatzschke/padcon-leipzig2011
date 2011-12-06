@@ -3,7 +3,9 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
+			<th><?php echo $this->Paginator->sort('controller');?></th>
 			<th><?php echo $this->Paginator->sort('action');?></th>
+			<th><?php echo $this->Paginator->sort('param');?></th>
 			<th><?php echo $this->Paginator->sort('content_paragraph');?></th>
 			<th><?php echo $this->Paginator->sort('active');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
@@ -20,7 +22,9 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $siteContent['SiteContent']['id']; ?>&nbsp;</td>
+		<td><?php echo $siteContent['SiteContent']['controller']; ?>&nbsp;</td>
 		<td><?php echo $siteContent['SiteContent']['action']; ?>&nbsp;</td>
+		<td><?php echo $siteContent['SiteContent']['param']; ?>&nbsp;</td>
 		<td><?php echo $siteContent['SiteContent']['content_paragraph']; ?>&nbsp;</td>
 		<td><?php echo $siteContent['SiteContent']['active']; ?>&nbsp;</td>
 		<td><?php echo $siteContent['SiteContent']['created']; ?>&nbsp;</td>

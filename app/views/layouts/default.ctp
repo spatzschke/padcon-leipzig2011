@@ -30,6 +30,8 @@
 
 		echo $this->Html->css('reset');
 		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('cms');
+		
 		echo $this->Html->css('screen');
 		
 		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');

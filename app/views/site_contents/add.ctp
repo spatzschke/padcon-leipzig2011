@@ -3,7 +3,9 @@
 	<fieldset>
 		<legend><?php __('Add Site Content'); ?></legend>
 	<?php
+		echo $this->Form->input('controller');
 		echo $this->Form->input('action');
+		echo $this->Form->input('param');
 		echo $this->Form->input('content_paragraph');
 		echo $this->Form->input('active');
 	?>

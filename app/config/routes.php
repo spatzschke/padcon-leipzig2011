@@ -41,7 +41,7 @@
 	
 //Footer Routes
 	
-	Router::connect('/Kontakt', array('controller' => 'siteContents', 'action' => 'contact'));
-	Router::connect('/Uber_uns', array('controller' => 'siteContents', 'action' => 'about'));
-	Router::connect('/AGB', array('controller' => 'siteContents', 'action' => 'agb'));
-	Router::connect('/Impressum', array('controller' => 'siteContents', 'action' => 'imprint'));
+	Router::connect('/Kontakt', array('controller' => 'Pages', 'action' => 'display', 'contact'));
+	Router::connect('/Uber_uns', array('controller' => 'Pages', 'action' => 'display', 'about_us'));
+	Router::connect('/AGB', array('controller' => 'pages', 'action' => 'display', 'agb'));
+	Router::connect('/Impressum', array('controller' => 'Pages', 'action' => 'display', 'imprint'));

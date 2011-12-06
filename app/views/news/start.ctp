@@ -1,4 +1,6 @@
 <div id="news">
+	<div class="cmsComponent"><?php e($this->element('loadCMSContent')); ?></div>
+
 	<?php
 	foreach ($news as $news):
 	?>
