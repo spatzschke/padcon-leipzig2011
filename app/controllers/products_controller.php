@@ -2,10 +2,41 @@
 class ProductsController extends AppController {
 
 	var $name = 'Products';
+	public $uses = array('Product', 'Material', 'Size');
 
 	function index() {
 		$this->Product->recursive = 0;
 		$this->set('products', $this->paginate());
+	}
+	
+	function listing($id = null) {
+		if (!$id && empty($this->data)) {
+			$this->Session->setFlash(__('Invalid product', true));
+			$this->redirect(array('controller' => 'Categories', 'action' => 'overview'));
+		}
+		
+		$products = $this->Product->find('all',array('conditions' => array('Product.active' => '1', 'Category.short' => $id )));
+		
+		$this->set(compact('products'));
+	}
+	
+	function sizeBuilder($id = null) {
+		$size = $this->Size->findById( $id );
+		
+		$sizeString = '';
+		
+		
+		//50x36x16cm
+		if($size['Size']['depth'] != '' && $size['Size']['width'] != '' && $size['Size']['height'] != '') {
+			$sizeString = $size['Size']['depth'].'x'.$size['Size']['width'].'x'.$size['Size']['height'];
+		}
+		
+		//Ã˜30x10/3cm
+		if($size['Size']['depth'] != '' && $size['Size']['width'] != '' && $size['Size']['height'] != '') {
+			$sizeString = $size['Size']['depth'].'x'.$size['Size']['width'].'x'.$size['Size']['height'];
+		}
+		echo $sizeString. ' cm';
+		
 	}
 
 	function view($id = null) {
