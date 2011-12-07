@@ -27,19 +27,29 @@ class SiteContentsController extends AppController {
 	}
 
 	function add() {
+		$file = new File(CSS . 'cms.css', false, 0777);
+		
 		if (!empty($this->data)) {
 			$this->SiteContent->create();
 			if ($this->SiteContent->save($this->data)) {
+				
+				$file->write($this->data['SiteContent']['style_content']);
+				
 				$this->Session->setFlash(__('The site content has been saved', true));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The site content could not be saved. Please, try again.', true));
 			}
 		}
+		if (empty($this->data)) {
+			
+			$content = $file->read();
+			$this->set('styleContent', $content);
+		}
 	}
 
 	function edit($id = null) {
-		$file = new File(CSS . 'cms.css', true, 0777);
+		$file = new File(CSS . 'cms.css', false, 0777);
 		
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid site content', true));
@@ -47,8 +57,6 @@ class SiteContentsController extends AppController {
 		}
 		if (!empty($this->data)) {
 			if ($this->SiteContent->save($this->data)) {
-				
-				
 				
 				$file->write($this->data['SiteContent']['style_content']);
 				
