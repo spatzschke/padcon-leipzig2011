@@ -57,7 +57,11 @@
 
 			<?php echo $this->Session->flash(); ?>
 
+			<div class="cmsComponent"><?php e($this->element('loadCMSContent', array('position' => 'top'))); ?></div>
+
 			<?php echo $content_for_layout; ?>
+            
+            <div class="cmsComponent"><?php e($this->element('loadCMSContent', array('position' => 'bottom'))); ?></div>
 
 		</div>
 		<div id="footer">

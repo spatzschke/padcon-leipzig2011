@@ -18,9 +18,9 @@ class SiteContentsController extends AppController {
 		$this->set('siteContent', $this->SiteContent->read(null, $id));
 	}
 	
-	function loadCMSContent($controller = null, $action = null, $param = null) {
+	function loadCMSContent($position = null, $controller = null, $action = null, $param = null) {
 	
-		$content = $this->SiteContent->find('first',array('conditions' => array('controller' => $controller, 'action' => $action, 'param' => $param, 'active' => 1), 'fields' => array('content_paragraph')));
+		$content = $this->SiteContent->find('first',array('conditions' => array('controller' => $controller, 'action' => $action, 'param' => $param, 'active' => 1, 'position' => $position), 'fields' => array('content_paragraph')));
 	
 		echo $content['SiteContent']['content_paragraph'];
 		

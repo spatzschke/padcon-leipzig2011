@@ -1,3 +1,3 @@
-<div id="about" class="cmsComponent">
-	<p class="contentParagraph"><?php e($this->element('loadCMSContent')); ?><p>
+<div id="about">
+	<div class="cmsComponent"><?php e($this->element('loadCMSContent', array('position' => 'center'))); ?></div>
 </div>
