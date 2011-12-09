@@ -286,20 +286,20 @@ a .categoryItemRight {
 	
 	background:url(../img/horizontal_devider.png) no-repeat 0 bottom transparent
 }
-.productListItem .productItemHeader{
+.productListItem2 .productItemHeader{
 	background:url(../img/bg_productItemHeader.png) no-repeat 0 0 transparent;
 	height: 14px;
 	width: 100%;
 	float: left;		
 }
 
-.productListItem .productItemCenter{
+.productListItem2 .productItemCenter{
 	background:url(../img/bg_productItemCenter.png) repeat-y 0 0 transparent;
 	float: left;	
 	width: 100%;	
 }
 
-.productListItem .productItemFooter{
+.productListItem2 .productItemFooter{
 	background:url(../img/bg_productItemFooter.png) no-repeat 0 0 transparent;
 	height: 17px;
 	width: 100%;
