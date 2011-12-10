@@ -1,7 +1,7 @@
 <?php
 class Color extends AppModel {
 	var $name = 'Color';
-	var $displayField = 'name';
+	var $displayField = 'code';
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 	var $belongsTo = array(

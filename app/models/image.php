@@ -1,11 +1,21 @@
 <?php
 class Image extends AppModel {
 	var $name = 'Image';
-	var $displayField = 'id';
+	var $displayField = 'name';
 	var $validate = array(
-		'product_id' => array(
+		'name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'product_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -22,10 +32,8 @@ class Image extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
-		'description' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'url' => array(
+				'rule' => array('url'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -33,7 +41,7 @@ class Image extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'color' => array(
+		'color_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -50,6 +58,13 @@ class Image extends AppModel {
 		'Product' => array(
 			'className' => 'Product',
 			'foreignKey' => 'product_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Color' => array(
+			'className' => 'Color',
+			'foreignKey' => 'color_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

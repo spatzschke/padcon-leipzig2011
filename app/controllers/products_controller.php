@@ -2,7 +2,7 @@
 class ProductsController extends AppController {
 
 	var $name = 'Products';
-	public $uses = array('Product', 'Material', 'Size');
+	public $uses = array('Product', 'Material', 'Size', 'Color');
 
 	function index() {
 		$this->Product->recursive = 0;
@@ -37,6 +37,13 @@ class ProductsController extends AppController {
 		}
 		echo $sizeString. ' cm';
 		
+	}
+	
+	function getColors($material = null) {
+		
+		
+		$colors = $this->Color->find('all',array('conditions' => array('Color.material_id' => $material)));
+		return $colors;	
 	}
 
 	function view($id = null) {

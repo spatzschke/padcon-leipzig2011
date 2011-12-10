@@ -4,10 +4,12 @@
 		<legend><?php __('Edit Image'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
+		echo $this->Form->input('name');
 		echo $this->Form->input('product_id');
+		echo $this->Form->input('color_id');
 		echo $this->Form->input('path');
 		echo $this->Form->input('description');
-		echo $this->Form->input('color');
+		
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
@@ -20,5 +22,7 @@
 		<li><?php echo $this->Html->link(__('List Images', true), array('action' => 'index'));?></li>
 		<li><?php echo $this->Html->link(__('List Products', true), array('controller' => 'products', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Product', true), array('controller' => 'products', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Colors', true), array('controller' => 'colors', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Color', true), array('controller' => 'colors', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

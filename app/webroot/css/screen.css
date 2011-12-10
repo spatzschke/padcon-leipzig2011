@@ -309,7 +309,7 @@ a .categoryItemRight {
 .productListItem .productItemImage{	
 	float: left;
     height: 118px;
-    margin: 10px 30px;
+    margin: 10px 45px;
     padding: 10px;
     width: 198px;
 	margin-bottom: 30px;
@@ -333,11 +333,20 @@ a .categoryItemRight {
 
 .productListItem .productItemContent{
 	float: left;	
-	width: 41%;
+	width: 39%;
 	padding: 10px 0;	
 	font-size: 14px;
 	color: #346AA6;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
+}
+
+.productListItem .productItemContent label {
+	float: left;
+    width: 65px;	
+}
+
+.productListItem .productItemContent label.color {
+	padding-top: 5px;
 }
 
 .productListItem .productItemContent .productItemNumber{	
@@ -354,9 +363,27 @@ a .categoryItemRight {
 
 .productListItem .productItemContent .productItemColor{	
 	height: 30px;
+	margin: 5px 0;
+	overflow: hidden; 
 }
 
+.productItemColor .colorItem {
+	height: 30px;
+	width: 30px;
+	float: left;
+	margin: 0 5px 5px 0;	
+}
+
+.productItemColor .colorItem img {
+	height: 30px;
+	width: 30px;
+	float: left;	
+}
+
+
 .productListItem .productItemContent .productItemSize{	
+	width: 100%;
+	float: left;
 }
 
 .productListItem .productItemFeaturesHeader{
@@ -368,7 +395,7 @@ a .categoryItemRight {
 	color: #346AA6;	
 	float: left;
 	width: 210px;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 
 .productListItem .productItemFeatures li{
