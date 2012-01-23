@@ -27,7 +27,7 @@
 				<?php e($this->element('productItemColorSlider', array('material_id' => $product['Material']['id']))); ?></div>
             <div class="productItemSize">
 				<label><?php e($präfix_size);?>:</label>
-            	<?php e($präfix_size);?>: <?php $this->requestAction('Products/sizeBuilder/'.$product['Size']['id']); ?>
+            	<?php $this->requestAction('Products/sizeBuilder/'.$product['Size']['id']); ?>
             </div>
         </div>
         <div class="productItemFeatures">

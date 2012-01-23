@@ -217,8 +217,8 @@ a:hover {
 }
 
 .categoryItem {
-	width: 270px;
-	height: 80px;
+	width: 278px;
+	height: 53px;
 	float: left;
 	font-size: 18px;
 	padding: 32px 0px;	
@@ -231,8 +231,11 @@ a:hover {
 
 #partnerCategories a .categoryItem {
 	padding-top: 23px;
-	height: 90px;
-	
+	height: 62px;	
+}
+
+#catalogs a .categoryItem {
+	height: 53px;	
 }
 
 a .categoryItemLeft {
@@ -241,43 +244,66 @@ a .categoryItemLeft {
 	padding-left: 100px;
 }
 
-a:hover .categoryItemLeft, a:hover .categoryItemRight {
-	color: #003D4C;	
-}
-
 a .categoryItemRight {	
 	padding-right: 100px;
 	padding-left: 5px;
 }
 
-#categories a .categoryItemLeft { background:url(../img/btn_category/btn_category_left.png) no-repeat 0 0 transparent;	 }
-#categories a:hover .categoryItemLeft { background:url(../img/btn_category/btn_category_left_a.png) no-repeat 0 0 transparent; }
-#categories a .categoryItemRight { background:url(../img/btn_category/btn_category_right.png) no-repeat 0 0 transparent; }
-#categories a:hover .categoryItemRight { background:url(../img/btn_category/btn_category_right_a.png) no-repeat 0 0 transparent; }
+a:hover .categoryItemLeft, a:hover .categoryItemRight {
+	color: #003D4C;	
+}
 
-#partnerCategories a .categoryItemLeft { background:url(../img/btn_partner/btn_partner_left.png) no-repeat 0 0 transparent; }
-#partnerCategories a:hover .categoryItemLeft { background:url(../img/btn_partner/btn_partner_left_b.png) no-repeat 0 0 transparent; }
-#partnerCategories a .categoryItemRight { background:url(../img/btn_partner/btn_partner_right.png) no-repeat 0 0 transparent;	}
-#partnerCategories a:hover .categoryItemRight { background:url(../img/btn_partner/btn_partner_right_b.png) no-repeat 0 0 transparent; }
+#categories a .categoryItem { background: url("../img/btn_category.jpg") no-repeat scroll 0 0 transparent; }
+#categories a:hover .categoryItem-physio { background-position: -379px 0; }
+#categories a .categoryItem-physio { background-position: 4px 0; }
+#categories a:hover .categoryItem-pflege { background-position: -777px 0; }
+#categories a .categoryItem-pflege { background-position: -1165px 0; }
+#categories a:hover .categoryItem-intensiv { background-position: -379px -117px; }
+#categories a .categoryItem-intensiv { background-position: 4px -117px; }
+#categories a:hover .categoryItem-op { background-position: -777px -117px; }
+#categories a .categoryItem-op { background-position: -1165px -117px; }
+#categories a:hover .categoryItem-rontgen { background-position: -379px -236px; }
+#categories a .categoryItem-rontgen { background-position: 4px  -236px; }
+#categories a:hover .categoryItem-notfall { background-position: -777px -236px; }
+#categories a .categoryItem-notfall { background-position: -1165px  -236px; }
+#categories a:hover .categoryItem-baby { background-position: -379px -355px; }
+#categories a .categoryItem-baby { background-position: 4px -355px; }
+#categories a:hover .categoryItem-funktion { background-position: -777px -355px; }
+#categories a .categoryItem-funktion { background-position: -1165px -355px; }
+
+#partnerCategories a .categoryItem { background: url("../img/btn_partner.jpg") no-repeat scroll 0 0 transparent; }
+#partnerCategories a:hover .categoryItem-lagerung { background-position: -15px -20px; }
+#partnerCategories a .categoryItem-lagerung { background-position: -406px -20px; }
+#partnerCategories a .categoryItem-transport { background-position: -406px -139px; }
+#partnerCategories a:hover .categoryItem-transport { background-position: -15px -139px; }
+#partnerCategories a .categoryItem-medizinpflege { background-position: -406px -256px; }
+#partnerCategories a:hover .categoryItem-medizinpflege { background-position: -15px -256px; }
+#partnerCategories a .categoryItem-transfer { background-position: -1204px -19px; }
+#partnerCategories a:hover .categoryItem-transfer { background-position: -813px -19px; }
+#partnerCategories a .categoryItem-stahl { background-position: -1204px -138px; }
+#partnerCategories a:hover .categoryItem-stahl { background-position: -813px -138px; }
+#partnerCategories a .categoryItem-technik { background-position: -1204px -255px; }
+#partnerCategories a:hover .categoryItem-technik { background-position: -813px -255px; }
 #partnerCategories #c6 .text { margin-top: 8px; }
 
-#catalogs a:hover .categoryItem-physio { background:url(../img/btn_catalog/btn_catalog_physio_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-physio { background:url(../img/btn_catalog/btn_catalog_physio.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-pflege { background:url(../img/btn_catalog/btn_catalog_pflege_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-pflege { background:url(../img/btn_catalog/btn_catalog_pflege.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-intensiv { background:url(../img/btn_catalog/btn_catalog_its_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-intensiv { background:url(../img/btn_catalog/btn_catalog_its.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-op { background:url(../img/btn_catalog/btn_catalog_op_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-op { background:url(../img/btn_catalog/btn_catalog_op.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-rontgen { background:url(../img/btn_catalog/btn_catalog_rontgen_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-rontgen { background:url(../img/btn_catalog/btn_catalog_rontgen.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-notfall { background:url(../img/btn_catalog/btn_catalog_notfall_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-notfall { background:url(../img/btn_catalog/btn_catalog_notfall.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-baby { background:url(../img/btn_catalog/btn_catalog_baby_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-baby { background:url(../img/btn_catalog/btn_catalog_baby.png) no-repeat 0 0 transparent; }
-#catalogs a:hover .categoryItem-funktion { background:url(../img/btn_catalog/btn_catalog_funktion_a.png) no-repeat 0 0 transparent; }
-#catalogs a .categoryItem-funktion { background:url(../img/btn_catalog/btn_catalog_funktion.png) no-repeat 0 0 transparent; }
-#catalogs .categoryItem { padding-top: 18px; padding-bottom: 18px; line-height: 150%;}
+#catalogs a .categoryItem { background: url("../img/btn_catalog.jpg") no-repeat scroll 0 0 transparent; }
+#catalogs a .categoryItem-physio { background-position: -416px -12px; }
+#catalogs a:hover .categoryItem-physio { background-position: -14px -13px; }
+#catalogs a .categoryItem-pflege { background-position: -1220px -11px; }
+#catalogs a:hover .categoryItem-pflege { background-position: -818px -12px; }
+#catalogs a .categoryItem-intensiv { background-position: -416px -129px; }
+#catalogs a:hover .categoryItem-intensiv { background-position: -14px -130px; }
+#catalogs a .categoryItem-op { background-position: -1219px -127px; }
+#catalogs a:hover .categoryItem-op { background-position: -817px -128px; }
+#catalogs a .categoryItem-rontgen { background-position: -416px -247px; }
+#catalogs a:hover .categoryItem-rontgen { background-position: -13px  -248px; }
+#catalogs a .categoryItem-notfall { background-position: -1219px -246px; }
+#catalogs a:hover .categoryItem-notfall { background-position: -817px  -247px; }
+#catalogs a .categoryItem-baby { background-position: -416px -370px; }
+#catalogs a:hover .categoryItem-baby { background-position: -14px -371px; }
+#catalogs a .categoryItem-funktion { background-position: -1219px -368px; }
+#catalogs a:hover .categoryItem-funktion { background-position: -817px -369px; }
+#catalogs .categoryItem .text{ margin-top: -14px; line-height: 150%;}
 
 .productListItem {
 	width: 855px;

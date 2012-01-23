@@ -35,7 +35,14 @@ class ProductsController extends AppController {
 		if($size['Size']['depth'] != '' && $size['Size']['width'] != '' && $size['Size']['height'] != '') {
 			$sizeString = $size['Size']['depth'].'x'.$size['Size']['width'].'x'.$size['Size']['height'];
 		}
-		echo $sizeString. ' cm';
+		
+		
+		if($sizeString == '') {
+			echo 'siehe Eigenschaften';
+		} else {
+			echo $sizeString. ' cm';	
+		}
+		
 		
 	}
 	

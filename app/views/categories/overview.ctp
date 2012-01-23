@@ -9,7 +9,7 @@
 				$itemAlign = ' categoryItemRight';
 			}
 		
-			echo $this->Html->link('<div id="c'.$category['Category']['id'].'" class="categoryItem'.$itemAlign.' categoryItem'.$category['Category']['short'].'"><div class="text">'.$category['Category']['name'].'</div></div>',array('controller'=>'Products', 'action'=>'listing', $category['Category']['short']), array('escape'=>false));
+			echo $this->Html->link('<div id="c'.$category['Category']['id'].'" class="categoryItem'.$itemAlign.' categoryItem-'.$category['Category']['short'].'"><div class="text">'.$category['Category']['name'].'</div></div>',array('controller'=>'Products', 'action'=>'listing', $category['Category']['short']), array('escape'=>false));
 		
 		endforeach; ?>
 </div>
