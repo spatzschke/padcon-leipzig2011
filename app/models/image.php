@@ -32,16 +32,9 @@ class Image extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'url' => array(
-				'rule' => array('url'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+			
 		),
-		'color_id' => array(
+		'color' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -64,7 +57,7 @@ class Image extends AppModel {
 		),
 		'Color' => array(
 			'className' => 'Color',
-			'foreignKey' => 'color_id',
+			'foreignKey' => 'color',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -332,6 +332,17 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 	float: left;		
 }
 
+.productListItem .productItemCenter, .productListItem .productItemHeader{
+	position: relative;
+}
+
+.productListItem .productItemCenter .loader{
+	position: absolute;
+	top: 65px;
+	width: 20px;
+	display: none;	
+}
+
 .productListItem .productItemImage{	
 	float: left;
     height: 118px;
@@ -394,8 +405,8 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 }
 
 .productItemColor .colorItem {
-	height: 30px;
-	width: 30px;
+	height: 29px;
+	width: 29px;
 	float: left;
 	margin: 0 10px 5px 0;	
 }
@@ -429,6 +440,32 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 	display: block;
     line-height: 120%;
     padding: 0 0 10px 24px;
+}
+
+div.message {
+	background-color: transparent;
+    margin: 0 25%;
+    position: relative;
+    text-align: center;
+    top: 26px;
+    width: 50%;
+	color: #000000;
+}
+
+div.message.error{
+	
+}
+
+div.message.success{
+	
+}
+
+div.message.info{
+	
+}
+
+div.message.attention{
+	
 }
 
 div.form, div.index, div.view {

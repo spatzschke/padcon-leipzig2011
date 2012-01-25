@@ -7,15 +7,20 @@
 	
 ?>		
 
-<div class="productListItem productListItem-<?php e($product['Category']['short']);?>">
+<div id="p<?php e($product['Product']['product_number']);?>" class="productListItem productListItem-<?php e($product['Category']['short']);?>">
 	<div class="productItemHeader"></div>
     <div class="productItemCenter">
-    	<div class="productItemImage"><img src="<?php if(empty($product['Image'])) {
+    	<div class="loader"><img src="<?php e($this->webroot.'img/ajax.gif'); ?>" alt="Ladevorgang"/></div>
+    	<div class="productItemImage">	
+        	<a class="mediaURL" href="http://localhost:81/padcon-leipzig-media/index.php?p=<?php e($product['Product']['product_number']);?>&c=99">
+            	<img src="<?php if(count($product['Image']) == 0) {
 					e($this->webroot.'img/no_pic.png');
 				} else {
-					e($product['Image'][0]['path']);
+					e($product['Image'][0]['path'].'t.'.$product['Image'][0]['ext']);
 				}
-			?>" alt="<?php e($product['Product']['name']);?>" /></div>
+				?>" alt="<?php e($product['Product']['name']);?>" />
+        	</a>
+        </div>
     	<div class="productItemContent">
             <div class="productItemNumber"><?php e($präfix_number);?><?php e($product['Product']['product_number']);?></div>
             <div class="productItemName"><?php e($product['Product']['name']);?></div>
@@ -37,7 +42,8 @@
             </ul>
         </div>
     </div>
-    <div class="productItemFooter"> </div>
+    <div class="message"></div>
+    <div class="productItemFooter"></div>
 	
     
 
