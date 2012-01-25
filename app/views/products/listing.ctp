@@ -33,6 +33,8 @@
 
 			function saveImageInDb(response) {
 				 
+				 $.colorbox.close();
+				 
 				 var data = {
 							  data: {
 										product_number : response['data']['product_number'],
