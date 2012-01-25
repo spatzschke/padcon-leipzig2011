@@ -14,12 +14,16 @@
 		
 			$(".mediaURL").colorbox({
 				iframe:true, 
-				width:"320", 
-				height:"320", 
+				width:"292", 
+				height:"292", 
 				overlayClose: false,
 				onOpen: function () {
 					$(this).parent().parent().find('.loader').show();	
+				},
+				onLoad: function() {
+    				$('#cboxClose').remove();
 				}
+
 			});
 			
 			$('.colorItem').bind({
