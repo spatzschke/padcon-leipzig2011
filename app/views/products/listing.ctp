@@ -7,6 +7,7 @@
 		endforeach; ?>
         <?php echo $this->Html->css('colorbox');?>
 		<?php echo $this->Html->script('jquery.colorbox-min.js');?>
+        <?php echo $this->Html->script('bootstrap-popover.js');?>
         
         <script>
 		var src = $(".colorItem").find("img").attr("src");
@@ -44,7 +45,7 @@
 				 
 				 $.ajax({
 					 type: 'POST',
-					 url:"\/padcon-leipzig2011\/Images\/add\/",
+					 url:"\/Images\/add\/",
 					 data: response,
 					 success:function (data, textStatus) {
 						 	$('#p'+response['data']['product_number']).find('.message').html();
