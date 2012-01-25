@@ -12,7 +12,7 @@
     <div class="productItemCenter">
     	<div class="loader"><img src="<?php e($this->webroot.'img/ajax.gif'); ?>" alt="Ladevorgang"/></div>
     	<div class="productItemImage">	
-        	<a class="mediaURL" href="http://localhost:81/padcon-leipzig-media/index.php?p=<?php e($product['Product']['product_number']);?>&c=99">
+        	<a class="mediaURL" href="http://media.padcon-leipzig.de/index.php?p=<?php e($product['Product']['product_number']);?>&c=99">
             	<img src="<?php if(count($product['Image']) == 0) {
 					e($this->webroot.'img/no_pic.png');
 				} else {

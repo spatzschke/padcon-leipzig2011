@@ -68,9 +68,6 @@ class ImagesController extends AppController {
 			$this->set(compact('products', 'colors')); 
 		}
 	}
-	
-	function build_image_data($data) {
-	}
 
 	function edit($id = null) {
 		if (!$id && empty($this->data)) {
