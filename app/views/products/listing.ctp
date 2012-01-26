@@ -17,7 +17,7 @@
 				height:"292", 
 				overlayClose: false,
 				onOpen: function () {
-					$(this).parent().parent().find('.loader').show();	
+					$(this).parent().parent().find('.loader').toggle();	
 				},
 				onLoad: function() {
     				$('#cboxClose').remove();
@@ -31,12 +31,14 @@
 			  },
 			  mouseleave: function() {
 				if(!$(this).hasClass('active') ) {
-					$(this).find('img').attr('src','<?php echo $html->url('/img/color_overlay.png')?>')
+					$(this).find('img').attr('src','<?php echo $html->url('/img/color_overlay.png')?>');
 				}
 			  }, 
 			  click: function() {
-				  
+				 
+				$(this).parent().find('.active img').attr('src','<?php echo $html->url('/img/color_overlay.png')?>'); 
 				$(this).parent().find('.active').removeClass('active');
+				
 				  
 				var url = $(this).parent().parent().parent().find('.productItemImage a').attr('href');
 				var rep = url.replace(url.substr(url.length - 4, 4), 'c='+$(this).attr('rel'));
@@ -48,17 +50,14 @@
 
 			function saveImageInDb(response) {
 				 
-				 $.colorbox.close();
-				 
 				 var data = {
-							  data: {
-										product_number : response['data']['product_number'],
-										color : response['data']['color'],
-										path : response['data']['path'],
-										ext : response['data']['ext'],
-									  
-							  	}
-                             };
+					    data: {
+							product_number : response['data']['product_number'],
+							color : response['data']['color'],
+							path : response['data']['path'],
+							ext : response['data']['ext'],
+						}
+			     };
 				 
 				 $.ajax({
 					 type: 'POST',
@@ -67,7 +66,9 @@
 					 success:function (data, textStatus) {
 						 	$('#p'+response['data']['product_number']).find('.message').html();
 							$('#p'+response['data']['product_number']+' .productItemImage').find('img').attr('src',response['data']['path']+'t.'+response['data']['ext']+'?'+new Date().getTime());
-							$('#p'+response['data']['product_number']).find('.loader').hide();
+							$.colorbox.close(function() {
+								$('#p'+response['data']['product_number']).find('.loader').toggle();
+							});
 					 }, 
 					 
 					
