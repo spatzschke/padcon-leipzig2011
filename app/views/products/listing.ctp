@@ -30,7 +30,19 @@
 				$(this).find('img').attr('src','<?php echo $html->url('/img/color_overlay_a.png')?>');
 			  },
 			  mouseleave: function() {
-				$(this).find('img').attr('src','<?php echo $html->url('/img/color_overlay.png')?>')
+				if(!$(this).hasClass('active') ) {
+					$(this).find('img').attr('src','<?php echo $html->url('/img/color_overlay.png')?>')
+				}
+			  }, 
+			  click: function() {
+				  
+				$(this).parent().find('.active').removeClass('active');
+				  
+				var url = $(this).parent().parent().parent().find('.productItemImage a').attr('href');
+				var rep = url.replace(url.substr(url.length - 4, 4), 'c='+$(this).attr('rel'));
+				$(this).parent().parent().parent().find('.productItemImage a').attr('href', rep);
+				
+				$(this).addClass('active');
 			  }
 			});
 

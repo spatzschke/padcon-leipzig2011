@@ -346,7 +346,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 .productListItem .productItemImage{	
 	float: left;
     height: 118px;
-    margin: 10px 45px;
+    margin: 10px 40px;
     padding: 10px;
     width: 198px;
 	margin-bottom: 30px;
@@ -370,7 +370,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 
 .productListItem .productItemContent{
 	float: left;	
-	width: 39%;
+	width: 338px;
 	padding: 10px 0;	
 	font-size: 14px;
 	color: #346AA6;
@@ -384,6 +384,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 
 .productListItem .productItemContent label.color {
 	padding-top: 5px;
+	height: 27px;
 }
 
 .productListItem .productItemContent .productItemNumber{	
@@ -401,7 +402,6 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 .productListItem .productItemContent .productItemColor{	
 	height: 30px;
 	margin: 5px 0;
-	overflow: hidden; 
 }
 
 .productItemColor .colorItem {
