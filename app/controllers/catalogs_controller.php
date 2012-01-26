@@ -2,6 +2,7 @@
 class CatalogsController extends AppController {
 
 	var $name = 'Catalogs';
+	var $components = array('RequestHandler');
 
 	function index() {
 		$this->Catalog->recursive = 0;
@@ -14,11 +15,13 @@ class CatalogsController extends AppController {
 	}
 
 	function view($id = null) {
+		
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid catalog', true));
 			$this->redirect(array('action' => 'index'));
 		}
 		$this->set('catalog', $this->Catalog->read(null, $id));
+		$this->layout = 'catalog-iframe';
 	}
 
 	function add() {

@@ -13,6 +13,10 @@ body {
 	position: relative;
 }
 
+body.catalog {
+	background: none;	
+}
+
 a {
 	text-decoration: none;
 }
@@ -467,6 +471,42 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
     right: 0;
     text-align: right;
     width: 150px;
+}
+
+.catalogs a, .catalogs a:visited, .catalogs a:active {
+	color: #346AA6;
+}
+
+.catalogs .download {
+	padding: 0 80px;
+	margin-top: -20px;
+}
+
+.catalogs .download span {
+	font-weight: bold;
+}
+
+.catalogs .download .text{
+	float: left;
+	margin-top: 30px;
+}
+
+.catalogs .download img{
+	float: left;
+}
+
+.catalogs .info {
+	color: #666666;
+    float: left;
+    font-size: 11px;
+    margin: 0 125px;
+    position: absolute;
+    top: 95px;
+}
+
+.catalogs embed:active, .catalogs embed, .catalogs embed:focus {
+	border: 0px solid white;
+	outline: none;
 }
 
 div.message {

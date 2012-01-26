@@ -3,7 +3,6 @@ class ProductsController extends AppController {
 
 	var $name = 'Products';
 	public $uses = array('Product', 'Material', 'Size', 'Color', 'Image');
-	var $helpers = array('Js' => array('Jquery'));
 	var $components = array('RequestHandler');
 
 	function index() {
