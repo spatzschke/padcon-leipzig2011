@@ -25,6 +25,12 @@ class SiteContentsController extends AppController {
 		echo $content['SiteContent']['content_paragraph'];
 		
 	}
+	
+	function contact() {
+		if (!empty($this->data)) {
+			debug($this->data);	
+		}
+	}
 
 	function add() {
 		$file = new File(CSS . 'cms.css', false, 0777);

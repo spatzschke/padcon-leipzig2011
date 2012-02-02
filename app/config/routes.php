@@ -37,11 +37,11 @@
 	
 	Router::connect('/Produkte', array('controller' => 'Categories', 'action' => 'overview'));
 	Router::connect('/Kataloge', array('controller' => 'Catalogs', 'action' => 'overview'));
-	Router::connect('/Partner', array('controller' => 'PartnerCategories', 'action' => 'overview'));
+	Router::connect('/Fachhaendler', array('controller' => 'PartnerCategories', 'action' => 'overview'));
 	
 //Footer Routes
 	
-	Router::connect('/Kontakt', array('controller' => 'Pages', 'action' => 'display', 'contact'));
 	Router::connect('/Uber_uns', array('controller' => 'Pages', 'action' => 'display', 'about_us'));
-	Router::connect('/AGB', array('controller' => 'pages', 'action' => 'display', 'agb'));
+	Router::connect('/AGB', array('controller' => 'Pages', 'action' => 'display', 'agb'));
 	Router::connect('/Impressum', array('controller' => 'Pages', 'action' => 'display', 'imprint'));
+	Router::connect('/Kontakt', array('controller' => 'Site_Contents', 'action' => 'contact'));

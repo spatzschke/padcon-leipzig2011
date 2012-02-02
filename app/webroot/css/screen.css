@@ -509,6 +509,48 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 	outline: none;
 }
 
+.contact {
+	width: 50%;	
+	float: left;
+	color: #346AA6;
+}
+
+.contact h1, .contact h2 {
+	color: #003D4C;
+	font-size: 20px;	
+}
+
+.contact h2 {
+	font-size: 18px;
+	margin: 15px 0 10px 20px;	
+}
+
+.contact .static {
+	margin-left: 20px;	
+}
+
+.contactForm {
+	margin-top: 20px;	
+}
+
+.contactStatic {
+	margin-top: 40px;	
+}
+
+.contactForm h2{
+	margin-left: 5px;	
+}
+
+.contactForm label{
+	font-size: 100%;
+}
+
+.contactForm .inputName, .contactForm .inputMail{
+	clear: none;
+    float: left;
+    width: 46%;
+}
+
 div.message {
 	background-color: transparent;
     margin: 0 25%;
@@ -537,4 +579,13 @@ div.message.attention{
 
 div.form, div.index, div.view {
 	overflow: auto;	
+}
+
+input, textarea {
+	font-size: 90%;
+	padding: 2px;	
+}
+
+form div {
+	margin-bottom: 0;	
 }

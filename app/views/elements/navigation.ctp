@@ -12,7 +12,7 @@
 			'</li>
 			
 			<li>'
-				.$this->Html->link('<div class="image"></div><div class="linkText">Partner</div>','/Partner', array('class'=>'partner', 'escape'=>false)).
+				.$this->Html->link('<div class="image"></div><div class="linkText">Fachhändler</div>','/Fachhaendler', array('class'=>'partner', 'escape'=>false)).
 			'</li>
 			
 		</ul>
