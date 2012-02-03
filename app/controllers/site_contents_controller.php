@@ -4,6 +4,7 @@ App::import('Core', 'File');
 class SiteContentsController extends AppController {
 
 	var $name = 'SiteContents';
+	public $components = array('Email');
 
 	function index() {
 		$this->SiteContent->recursive = 0;
@@ -28,7 +29,17 @@ class SiteContentsController extends AppController {
 	
 	function contact() {
 		if (!empty($this->data)) {
-			debug($this->data);	
+			
+			$this->Email->to = 'stan.patzschke@googlemail.com';
+			$this->Email->subject = 'Kontaktformular';
+			$this->Email->replyTo = 'noreply@padcon-leipzig.de';
+			$this->Email->from = 'padcon Leipzig <noreply@padcon-leipzig.de>';
+			
+			if($this->Email->send('test') ) {
+				$this->Session->setFlash('Mail versandt!');
+			} else {
+				$this->Session->setFlash('Fehler');	
+			}
 		}
 	}
 
