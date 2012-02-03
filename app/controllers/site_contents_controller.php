@@ -37,6 +37,7 @@ class SiteContentsController extends AppController {
 			
 			if($this->Email->send('test') ) {
 				$this->Session->setFlash('Mail versandt!');
+				$this->redirect('/Kontakt');
 			} else {
 				$this->Session->setFlash('Fehler');	
 			}
