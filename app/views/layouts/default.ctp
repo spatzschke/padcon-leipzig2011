@@ -35,6 +35,7 @@
 		echo $this->Html->css('screen');
 		
 		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');
+		echo $this->Html->script('main');
 	
 		echo $scripts_for_layout;
 	?>

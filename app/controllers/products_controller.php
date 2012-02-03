@@ -114,4 +114,8 @@ class ProductsController extends AppController {
 		$this->Session->setFlash(__('Product was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	function search($searchString = null) {
+		
+	}
 }

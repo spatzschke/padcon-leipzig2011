@@ -1,4 +1,6 @@
 <div class="products">
+    <h1><?php  echo $products[0]['Category']['name'] ?></h1>
+
 	<?php
 		foreach ($products as $product):
 		

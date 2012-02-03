@@ -172,6 +172,32 @@ a:hover {
 	color: #f79433;
 }
 
+#topNavigation .search {
+	float: right;
+    margin-right: 50px;
+    margin-top: 32px;
+    width: 150px;
+	position: relative;	
+}
+
+#topNavigation .search .cancel{
+	background: url("../img/cancel.png") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    left: 7px;
+    position: absolute;
+    top: 11px;
+    width: 15px;
+	display: none;	
+}
+
+#topNavigation .search input{
+	background: url("../img/search.png") no-repeat scroll 0 0 #346AA6;
+    border: 0 none;
+    padding: 11px 37px 12px 15px;
+    width: 125px;
+	color: #346aa6;
+}
+
 #content {
 	background: url(../img/layout/bg_border.png) repeat-y 0 0 transparent;
 	padding: 60px 80px 20px;
@@ -381,6 +407,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
     margin-left: -80px;
     position: relative;
     width: 160px;
+	height: 123px;
 }
 
 .partnerListItem .partnerItemImage img{
