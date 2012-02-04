@@ -33,4 +33,14 @@
  * @link http://book.cakephp.org/view/957/The-App-Controller
  */
 class AppController extends Controller {
+	
+	var $components = array('RequestHandler');
+	
+	function beforeRender() {
+		if ($this->RequestHandler->isAjax()) {
+			$this->layout = 'ajax';
+			Configure::write('debug', 0);
+		}
+	}
+
 }

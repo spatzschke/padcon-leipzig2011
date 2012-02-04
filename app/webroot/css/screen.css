@@ -17,8 +17,9 @@ body.catalog {
 	background: none;	
 }
 
-a {
+a, a:active, a:focus {
 	text-decoration: none;
+	color: #003D4C;
 }
 
 a:hover {
@@ -28,7 +29,8 @@ a:hover {
 
 #navigationBandage {
 	position: absolute;
-	top: 270px;
+	top: 250px;
+	left: 0;
 	height: 80px;
 	width: 100%; 
 	background-color: #346AA6;
@@ -37,6 +39,7 @@ a:hover {
 #footerBandage {
     background-color: #346AA6;
     bottom: 50px;
+	left: 0;
     height: 35px;
     position: absolute;
     width: 100%;
@@ -114,8 +117,7 @@ a:hover {
 #topNavigation li {
 	display: inline;
 	height: 114px;
-	
-		
+	float: left;
 }
 
 #topNavigation a {
@@ -180,14 +182,21 @@ a:hover {
 	position: relative;	
 }
 
-#topNavigation .search .cancel{
-	background: url("../img/cancel.png") no-repeat scroll 0 0 transparent;
+#topNavigation .search div{
     height: 16px;
-    left: 7px;
+    left: 10px;
     position: absolute;
     top: 11px;
     width: 15px;
 	display: none;	
+}
+
+#topNavigation .search .cancel {
+	background: url("../img/cancel.png") no-repeat scroll 0 0 transparent;	
+}
+
+#topNavigation .search .cancel:hover {
+	background-position: 0px -18px;	
 }
 
 #topNavigation .search input{
@@ -201,6 +210,10 @@ a:hover {
 #content {
 	background: url(../img/layout/bg_border.png) repeat-y 0 0 transparent;
 	padding: 60px 80px 20px;
+	min-height: 500px;
+	clear: both;
+    color: #333333;
+    overflow: auto;
 }
 
 #footer {
@@ -257,6 +270,7 @@ a:hover {
 .categoryItem .text{
 	width: 260px;
 	text-align: center;
+	font-weight: bold;
 }
 
 #partnerCategories a .categoryItem {
@@ -317,10 +331,10 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 #partnerCategories #c6 .text { margin-top: 8px; }
 
 #catalogs a .categoryItem { background: url("../img/btn_catalog.jpg") no-repeat scroll 0 0 transparent; }
-#catalogs a .categoryItem-physio { background-position: -416px -12px; }
-#catalogs a:hover .categoryItem-physio { background-position: -14px -13px; }
-#catalogs a .categoryItem-pflege { background-position: -1220px -11px; }
-#catalogs a:hover .categoryItem-pflege { background-position: -818px -12px; }
+#catalogs a .categoryItem-physio { background-position: -416px -10px; }
+#catalogs a:hover .categoryItem-physio { background-position: -14px -11px; }
+#catalogs a .categoryItem-pflege { background-position: -1220px -10px; }
+#catalogs a:hover .categoryItem-pflege { background-position: -818px -11px; }
 #catalogs a .categoryItem-intensiv { background-position: -416px -129px; }
 #catalogs a:hover .categoryItem-intensiv { background-position: -14px -130px; }
 #catalogs a .categoryItem-op { background-position: -1219px -127px; }
@@ -431,7 +445,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 
 .productListItem .productItemContent label.color {
 	padding-top: 5px;
-	height: 27px;
+	height: 30px;
 }
 
 .productListItem .productItemContent .productItemNumber{	
@@ -505,7 +519,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 }
 
 .catalogs .download {
-	padding: 0 70px;
+	padding: 0 60px;
 	margin-top: -20px;
 }
 
@@ -520,6 +534,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 
 .catalogs .download img{
 	float: left;
+	border: 0 none;
 }
 
 .catalogs .info {

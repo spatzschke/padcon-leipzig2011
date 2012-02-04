@@ -29,12 +29,16 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('reset');
-		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('cms');
+		
+		echo $this->Html->css('colorbox');
 		
 		echo $this->Html->css('screen');
 		
 		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');
+		
+		echo $this->Html->script('jquery.colorbox-min.js');
+		
 		echo $this->Html->script('main');
 	
 		echo $scripts_for_layout;
@@ -46,7 +50,7 @@
 	<div id="container">
 		<div id="header">
 			<div class="lettering"></div>
-            <?php echo $this->Html->link('<div class="logo">padcon</div>','/Products/', array('escape'=>false)); ?>
+            <?php echo $this->Html->link('<div class="logo">padcon</div>','/', array('escape'=>false, 'class' => 'ajax')); ?>
             <div class="caption">Fachhandel und Service für medizinische Einrichtungen</div>
 		</div>
         <div id="topNavigation">

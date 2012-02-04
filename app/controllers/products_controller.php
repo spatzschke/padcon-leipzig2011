@@ -116,6 +116,15 @@ class ProductsController extends AppController {
 	}
 	
 	function search($searchString = null) {
+		if (!$searchString && empty($this->data)) {
+			$this->Session->setFlash(__('Invalid product', true));
+		}
+		if($this->data['searchNumber'] == '') {
+			$products = $this->Product->find('all',array('conditions' => array('Product.active' => '1', 'Product.name LIKE' => $this->data['searchStr'].'%' )));
+		} else {
+			$products = $this->Product->find('all',array('conditions' => array('Product.active' => '1', 'Product.product_number LIKE' => $this->data['searchNumber'].'%' )));	
+		}
 		
+		$this->set(compact('products'));
 	}
 }

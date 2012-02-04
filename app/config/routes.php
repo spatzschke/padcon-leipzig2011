@@ -37,7 +37,7 @@
 	
 	Router::connect('/Produkte', array('controller' => 'Categories', 'action' => 'overview'));
 	Router::connect('/Kataloge', array('controller' => 'Catalogs', 'action' => 'overview'));
-	Router::connect('/Fachhaendler', array('controller' => 'PartnerCategories', 'action' => 'overview'));
+	Router::connect('/Fachhandel', array('controller' => 'PartnerCategories', 'action' => 'overview'));
 	
 //Footer Routes
 	
