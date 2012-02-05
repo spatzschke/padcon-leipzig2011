@@ -557,12 +557,15 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
     font-size: 11px;
     margin: 0 125px;
     position: absolute;
-    top: 95px;
+    top: 85px;
+	z-index: 1000;
 }
 
 .catalogs embed:active, .catalogs embed, .catalogs embed:focus {
 	border: 0px solid white;
 	outline: none;
+	position: absolute;
+	z-index: 1;
 }
 
 .contact {
