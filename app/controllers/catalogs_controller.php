@@ -12,6 +12,7 @@ class CatalogsController extends AppController {
 	function overview() {
 		$catalogs = $this->Catalog->find('all',array('conditions' => 'Catalog.active = 1'));
 		$this->set('catalogs', $catalogs);
+		$this->set('title_for_layout','Katalogübersicht');
 	}
 
 	function view($id = null) {

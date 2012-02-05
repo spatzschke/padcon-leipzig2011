@@ -22,7 +22,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php __('padcon Leipzig'); ?>
+		<?php __('padcon Leipzig | '); ?>
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php

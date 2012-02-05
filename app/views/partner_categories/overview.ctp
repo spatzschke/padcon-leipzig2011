@@ -9,7 +9,7 @@
 				$itemAlign = ' categoryItemRight';
 			}
 		
-			echo $this->Html->link('<div id="c'.$category['PartnerCategory']['id'].'" class="categoryItem'.$itemAlign.' categoryItem-'.$category['PartnerCategory']['short'].'"><div class="text">'.$category['PartnerCategory']['name'].'</div></div>',array('controller'=>'Partners', 'action'=>'listing', $category['PartnerCategory']['short']), array('escape'=>false));
+			echo $this->Html->link('<div id="c'.$category['PartnerCategory']['id'].'" class="categoryItem'.$itemAlign.' categoryItem-'.$category['PartnerCategory']['short'].'"><div class="text">'.$category['PartnerCategory']['name'].'</div></div>','/Fachhandel-'.Inflector::camelize($category['PartnerCategory']['name']), array('escape'=>false));
 		
 		endforeach; ?>
 </div>

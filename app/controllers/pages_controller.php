@@ -77,13 +77,26 @@ class PagesController extends AppController {
 			$subpage = $path[1];
 		}
 		if (!empty($path[$count - 1])) {
-			$title_for_layout = Inflector::humanize($path[$count - 1]);
+			
+			
+			switch(Inflector::humanize($path[$count - 1])) {
+			
+				case 'About Us': $title_for_layout = 'Über uns';
+								 break;
+							
+				case 'Agb': $title_for_layout = 'Allgemeine Geschäftsbedingungen';
+								 break;
+						
+				case 'Imprint': $title_for_layout = 'Impressum';
+								 break;
+								 
+				default: $title_for_layout = Inflector::humanize($path[$count - 1]);
+						 break;
+				
+			}
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
-	
-	function contact() {
-		
-	}
+
 }

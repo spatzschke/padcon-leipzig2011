@@ -42,6 +42,7 @@ class SiteContentsController extends AppController {
 				$this->Session->setFlash('Fehler');	
 			}
 		}
+		$this->set('title_for_layout','Kontakt');
 	}
 
 	function add() {

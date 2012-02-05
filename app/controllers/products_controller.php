@@ -14,11 +14,12 @@ class ProductsController extends AppController {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid product', true));
 			$this->redirect(array('controller' => 'Categories', 'action' => 'overview'));
-		}
+		} 
 		
 		$products = $this->Product->find('all',array('conditions' => array('Product.active' => '1', 'Category.short' => $id )));
 		
 		$this->set(compact('products'));
+		$this->set('title_for_layout','Produkte: '.$products[0]['Category']['name']);
 	}
 	
 	function sizeBuilder($id = null) {
@@ -126,5 +127,6 @@ class ProductsController extends AppController {
 		}
 		
 		$this->set(compact('products'));
+		$this->set('title_for_layout','Suchergebnis'); 
 	}
 }

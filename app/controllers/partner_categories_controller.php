@@ -11,6 +11,7 @@ class PartnerCategoriesController extends AppController {
 	function overview() {
 		$categories = $this->PartnerCategory->find('all',array('conditions' => 'PartnerCategory.active = 1'));
 		$this->set('categories', $categories);
+		$this->set('title_for_layout','Fachhandelübersicht');
 	}
 
 	function view($id = null) {

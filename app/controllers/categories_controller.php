@@ -11,6 +11,7 @@ class CategoriesController extends AppController {
 	function overview() {
 		$categories = $this->Category->find('all',array('conditions' => 'Category.active = 1'));
 		$this->set('categories', $categories);
+		$this->set('title_for_layout','Produkteübersicht');
 	}
 
 	function view($id = null) {

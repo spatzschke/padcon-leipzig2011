@@ -9,7 +9,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 150%;
-	color: #000000;
+	color: #003D4C;
 	position: relative;
 }
 
@@ -26,6 +26,15 @@ a:hover {
 	color: #f79433;
 }
 
+b {
+	font-weight: bold;	
+}
+
+h1, h1 b{
+	font-size: 20px;
+	font-weight: normal;
+	color: #003D4C;
+}
 
 #navigationBandage {
 	position: absolute;
@@ -427,6 +436,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 .partnerListItem .partnerItemImage img{
 	width: auto;
 	max-width: 160px;	
+	height: auto;
 }
 
 .productListItem .productItemContent, .partnerListItem .partnerItemContent{
@@ -512,6 +522,10 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
     right: 0;
     text-align: right;
     width: 150px;
+}
+
+.products h1 {
+	margin-bottom: 20px;	
 }
 
 .catalogs a, .catalogs a:visited, .catalogs a:active {

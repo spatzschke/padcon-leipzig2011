@@ -17,6 +17,7 @@ class PartnersController extends AppController {
 		$partners = $this->Partner->find('all',array('conditions' => array('Partner.active' => '1', 'PartnerCategory.short' => $id )));
 		
 		$this->set(compact('partners'));
+		$this->set('title_for_layout','Fachhandel - '.$partners[0]['PartnerCategory']['name']);
 	}
 
 	function view($id = null) {
