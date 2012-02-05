@@ -4,7 +4,15 @@ App::import('Core', 'File');
 class SiteContentsController extends AppController {
 
 	var $name = 'SiteContents';
-	public $components = array('Email');
+	public $components = array('Email', 'Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('contact', 'loadCMSContent');
+			
+		}
+	}
 
 	function index() {
 		$this->SiteContent->recursive = 0;

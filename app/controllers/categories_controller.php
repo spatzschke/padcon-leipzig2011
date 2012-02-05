@@ -2,6 +2,15 @@
 class CategoriesController extends AppController {
 
 	var $name = 'Categories';
+	public $components = array('Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('overview');
+			
+		}
+	}
 
 	function index() {
 		$this->Category->recursive = 0;

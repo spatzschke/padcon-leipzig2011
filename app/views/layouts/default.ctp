@@ -30,6 +30,7 @@
 
 		echo $this->Html->css('reset');
 		echo $this->Html->css('cms');
+		echo $this->Html->css('cake.generic');
 		
 		echo $this->Html->css('colorbox');
 		

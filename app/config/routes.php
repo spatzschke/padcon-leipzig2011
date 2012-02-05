@@ -76,3 +76,8 @@
 	Router::connect('/AGB', array('controller' => 'Pages', 'action' => 'display', 'agb'));
 	Router::connect('/Impressum', array('controller' => 'Pages', 'action' => 'display', 'imprint'));
 	Router::connect('/Kontakt', array('controller' => 'Site_Contents', 'action' => 'contact'));
+	
+//Other Routes
+	
+	Router::connect('/Anmelden', array('controller' => 'Users', 'action' => 'login'));
+	Router::connect('/Abmelden', array('controller' => 'Users', 'action' => 'logout'));

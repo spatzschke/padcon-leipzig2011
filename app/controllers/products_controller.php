@@ -3,7 +3,15 @@ class ProductsController extends AppController {
 
 	var $name = 'Products';
 	public $uses = array('Product', 'Material', 'Size', 'Color', 'Image');
-	var $components = array('RequestHandler');
+	var $components = array('RequestHandler', 'Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('listing', 'sizeBuilder', 'getColors', 'search');
+			
+		}
+	}
 
 	function index() {
 		$this->Product->recursive = 0;

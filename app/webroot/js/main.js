@@ -14,7 +14,7 @@ $(document).ready(function() {
 				cleanSearch();
 			});
 			
-			$('#topNavigation .search').keyup( function() {
+			$('#topNavigation .search').keyup(function() {
 				
 				
 				 $('#topNavigation .search input').animate({
@@ -51,6 +51,14 @@ $(document).ready(function() {
 								
 						 }, 
 					 });
+				} else {
+					$.ajax({
+						 url:window.location.pathname,
+						 success:function (data, textStatus) {
+								$('#content').html('');
+								$('#content').html(data);
+						 }, 
+					 });	
 				}
 				 
 			});

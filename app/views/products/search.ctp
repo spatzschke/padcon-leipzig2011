@@ -4,11 +4,15 @@
 	
 	<?php
 		if(!empty($products)) {
-			foreach ($products as $product):
-		
-				echo $this->element('productItem', array('product' => $product));
+			if(count($products) > 50) {
+				echo 'Es wurden zu viele Produkte gefunden. Bitte die Suche weiter einschränken.';
+			} else {
+				foreach ($products as $product):
 			
-			endforeach;
+					echo $this->element('productItem', array('product' => $product));
+				
+				endforeach;
+			}
 		} else {
 			echo 'Keine Produkte gefunden.';
 		}

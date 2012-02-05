@@ -557,7 +557,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
     font-size: 11px;
     margin: 0 125px;
     position: absolute;
-    top: 85px;
+    top: 95px;
 	z-index: 1000;
 }
 
@@ -566,6 +566,8 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 	outline: none;
 	position: absolute;
 	z-index: 1;
+	top: 105px;
+	left: 0;
 }
 
 .contact {

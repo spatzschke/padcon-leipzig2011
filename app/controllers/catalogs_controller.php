@@ -2,7 +2,15 @@
 class CatalogsController extends AppController {
 
 	var $name = 'Catalogs';
-	var $components = array('RequestHandler');
+	var $components = array('RequestHandler', 'Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('overview', 'view');
+			
+		}
+	}
 
 	function index() {
 		$this->Catalog->recursive = 0;

@@ -2,6 +2,15 @@
 class PartnersController extends AppController {
 
 	var $name = 'Partners';
+	public $components = array('Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('listing');
+			
+		}
+	}
 
 	function index() {
 		$this->Partner->recursive = 0;

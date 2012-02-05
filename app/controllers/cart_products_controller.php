@@ -3,7 +3,15 @@ class CartProductsController extends AppController {
 
 	var $name = 'CartProducts';
 	var $helpers = array('Ajax');
-	var $components = array('Security');
+	public $components = array('Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->deny('*');
+			
+		}
+	}
 
 	function index() {
 		$this->CartProduct->recursive = 0;

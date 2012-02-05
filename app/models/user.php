@@ -1,7 +1,6 @@
 <?php
 class User extends AppModel {
 	var $name = 'User';
-	var $displayField = 'title';
 	var $validate = array(
 		'title' => array(
 			'notempty' => array(
@@ -86,14 +85,6 @@ class User extends AppModel {
 		'phone' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-			'phone' => array(
-				'rule' => array('phone'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

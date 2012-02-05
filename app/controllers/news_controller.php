@@ -2,6 +2,15 @@
 class NewsController extends AppController {
 
 	var $name = 'News';
+	public $components = array('Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('start');
+			
+		}
+	}
 
 	function index() {
 		$this->News->recursive = 0;

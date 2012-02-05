@@ -3,8 +3,16 @@ class ImagesController extends AppController {
 
 	var $name = 'Images';
 	var $helpers = array('Js' => array('Jquery'));
-	var $components = array('RequestHandler');
+	var $components = array('RequestHandler', 'Auth');
 	public $uses = array('Product', 'Image');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->allow('add');
+			
+		}
+	}
  
 	function index() {
 		$this->Image->recursive = 0;

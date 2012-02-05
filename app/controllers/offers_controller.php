@@ -2,6 +2,15 @@
 class OffersController extends AppController {
 
 	var $name = 'Offers';
+	public $components = array('Auth');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->deny('*');
+			
+		}
+	}
 
 	function index() {
 		$this->Offer->recursive = 0;
