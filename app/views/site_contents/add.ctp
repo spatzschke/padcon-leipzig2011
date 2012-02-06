@@ -6,6 +6,15 @@
 		echo $this->Form->input('controller');
 		echo $this->Form->input('action');
 		echo $this->Form->input('param');
+		echo $this->Form->input('position', array(
+			'type' => 'select',
+			'options' => array(
+				'top' => 'Top',
+				'left' => 'Links',
+				'right' => 'Rechts',
+				'bottom' => 'Bottom'
+			)
+		));
 		echo $this->Form->input('content_paragraph');
 		echo '	<div class="input textarea required">
 					<label for="StyleContent">Style</label>
