@@ -31,8 +31,6 @@ class SiteContentsController extends AppController {
 	
 		$content = $this->SiteContent->find('first',array('conditions' => array('controller' => $controller, 'action' => $action, 'param' => $param, 'active' => 1, 'position' => $position), 'fields' => array('content_paragraph')));
 	
-		debug($position);
-	
 		echo $content['SiteContent']['content_paragraph'];
 		
 	}

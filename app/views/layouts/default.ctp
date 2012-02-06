@@ -51,7 +51,7 @@
 	<div id="container">
 		<div id="header">
 			<div class="lettering"></div>
-            <?php echo $this->Html->link('<div class="logo">padcon</div>','/', array('escape'=>false, 'class' => 'ajax')); ?>
+            <?php echo $this->Html->link('<div class="logo">padcon</div>','/', array('escape'=>false, 'class' => '')); ?>
             <div class="caption">Fachhandel und Service für medizinische Einrichtungen</div>
 		</div>
         <div id="topNavigation">

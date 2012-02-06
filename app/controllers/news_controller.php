@@ -20,6 +20,7 @@ class NewsController extends AppController {
 	function start() {
 		$news = $this->News->find('all',array('conditions' => 'News.active = 1', 'order' => 'News.created DESC'));
 		$this->set('news', $news);
+		$this->set('title_for_layout','Willkommen');
 	}
 
 	function view($id = null) {

@@ -38,7 +38,7 @@ h1, h1 b{
 
 #navigationBandage {
 	position: absolute;
-	top: 250px;
+	top: 280px;
 	left: 0;
 	height: 80px;
 	width: 100%; 
@@ -649,4 +649,23 @@ input, textarea {
 
 form div {
 	margin-bottom: 0;	
+}
+
+
+
+form .submit input[type="submit"]  ,input[type="submit"], div.actions ul li a, td.actions a {
+    background: -moz-linear-gradient(center top , #9cbbea, #5682af) repeat scroll 0 0 #5682af;
+    border: 1px solid #244663;
+    border-radius: 8px 8px 8px 8px;
+    color: #ffffff;
+    font-weight: normal;
+    min-width: 0;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000000;
+}
+
+input[type="submit"]:hover, div.actions ul li a:hover, td.actions a:hover, form .submit input[type="submit"]:hover {
+    background: -moz-linear-gradient(center top , #5682af, #9cbbea) repeat scroll 0 0 #5682af;
+	text-decoration: none;
 }
