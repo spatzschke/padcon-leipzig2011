@@ -3,7 +3,7 @@ class ImagesController extends AppController {
 
 	var $name = 'Images';
 	var $helpers = array('Js' => array('Jquery'));
-	var $components = array('RequestHandler', 'Auth');
+	var $components = array('RequestHandler', 'Auth', 'Session');
 	public $uses = array('Product', 'Image');
 	
 	public function beforeFilter() {

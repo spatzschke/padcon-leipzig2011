@@ -2,7 +2,7 @@
 class CatalogsController extends AppController {
 
 	var $name = 'Catalogs';
-	var $components = array('RequestHandler', 'Auth');
+	var $components = array('RequestHandler', 'Auth', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {

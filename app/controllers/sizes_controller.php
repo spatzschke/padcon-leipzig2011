@@ -2,6 +2,15 @@
 class SizesController extends AppController {
 
 	var $name = 'Sizes';
+	var $components = array('RequestHandler', 'Auth', 'Session');
+	
+	public function beforeFilter() {
+		if(isset($this->Auth)) {
+			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+			$this->Auth->deny('*');
+			
+		}
+	}
 
 	function index() {
 		$this->Size->recursive = 0;

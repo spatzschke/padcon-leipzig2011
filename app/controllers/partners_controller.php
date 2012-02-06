@@ -2,7 +2,7 @@
 class PartnersController extends AppController {
 
 	var $name = 'Partners';
-	public $components = array('Auth');
+	public $components = array('Auth', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {

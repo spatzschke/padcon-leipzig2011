@@ -2,8 +2,7 @@
 class CartProductsController extends AppController {
 
 	var $name = 'CartProducts';
-	var $helpers = array('Ajax');
-	public $components = array('Auth');
+	public $components = array('Auth', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {

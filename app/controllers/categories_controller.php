@@ -2,7 +2,7 @@
 class CategoriesController extends AppController {
 
 	var $name = 'Categories';
-	public $components = array('Auth');
+	public $components = array('Auth', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {

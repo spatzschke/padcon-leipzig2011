@@ -4,12 +4,12 @@ App::import('Core', 'File');
 class SiteContentsController extends AppController {
 
 	var $name = 'SiteContents';
-	public $components = array('Email', 'Auth');
+	public $components = array('RequestHandler', 'Email', 'Auth', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {
 			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
-			$this->Auth->allow('contact', 'loadCMSContent');
+			$this->Auth->allow('loadCMSContent', 'contact');
 			
 		}
 	}
@@ -27,9 +27,11 @@ class SiteContentsController extends AppController {
 		$this->set('siteContent', $this->SiteContent->read(null, $id));
 	}
 	
-	function loadCMSContent($position = null, $controller = null, $action = null, $param = null) {
+	function loadCMSContent($position = null, $controller = null, $action = null, $param = '') {
 	
 		$content = $this->SiteContent->find('first',array('conditions' => array('controller' => $controller, 'action' => $action, 'param' => $param, 'active' => 1, 'position' => $position), 'fields' => array('content_paragraph')));
+	
+		debug($position);
 	
 		echo $content['SiteContent']['content_paragraph'];
 		

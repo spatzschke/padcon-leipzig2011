@@ -2,7 +2,7 @@
 class UsersController extends AppController {
 
 	var $name = 'Users';
-	public $components = array('Auth');
+	public $components = array('Auth', 'Session', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {

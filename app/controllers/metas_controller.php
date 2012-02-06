@@ -3,7 +3,7 @@ class MetasController extends AppController {
 
 	var $name = 'Metas';
 	var $scaffold;
-	public $components = array('Auth');
+	public $components = array('Auth', 'Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {

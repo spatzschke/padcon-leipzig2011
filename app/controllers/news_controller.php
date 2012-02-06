@@ -2,7 +2,7 @@
 class NewsController extends AppController {
 
 	var $name = 'News';
-	public $components = array('Auth');
+	public $components = array('Session');
 	
 	public function beforeFilter() {
 		if(isset($this->Auth)) {
