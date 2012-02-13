@@ -9,11 +9,10 @@
 
 <div id="p<?php e($product['Product']['product_number']);?>" class="productListItem productListItem-<?php e($product['Category']['short']);?>">
 	<div class="productItemHeader"></div>
-    <?php debug(count($product['Image']));?>
     <div class="productItemCenter">
     	<div class="loader"><img src="<?php e($this->webroot.'img/ajax.gif'); ?>" alt="Ladevorgang"/></div>
     	<div class="productItemImage">	
-        	<a class="mediaURL" href="http://dev.padcon-leipzig.de/media/index.php?p=<?php e($product['Product']['product_number']);?>&c=99">
+        	<a class="mediaURL" href="http://dev.padcon-leipzig.de/media/index.php?id=<?php e($product['Product']['id']);?>&p=<?php e($product['Product']['product_number']);?>&c=99">
             	<img src="<?php if(count($product['Image']) == 0) {
 					e($this->webroot.'img/no_pic.png');
 				} else {

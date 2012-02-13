@@ -33,12 +33,12 @@ class ImagesController extends AppController {
 		
 		  if (!empty($this->data)) {
 				
-				$product = $this->Product->find('first',array('conditions' => array('Product.product_number' => $this->data['product_number'])));
+				$product = $this->Product->find('first',array('conditions' => array('Product.id' => $this->data['id'])));
 				$images = $this->Image->find('all',array('conditions' => array('Image.product_id' => $product['Product']['id'], 'Image.color' => $this->data['color'])));
 				
 				
 				$newImageData['Image']['name'] = $product['Product']['name'];
-				$newImageData['Image']['product_id'] = $product['Product']['id'];
+				$newImageData['Image']['product_id'] = $this->data['id'];
 				$newImageData['Image']['color'] = $this->data['color'];
 				$newImageData['Image']['path'] = $this->data['path'];
 				$newImageData['Image']['ext'] = $this->data['ext'];
