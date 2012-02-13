@@ -35,17 +35,30 @@ class ProductsController extends AppController {
 		
 		$sizeString = '';
 		
-		
-		//50x36x16cm
-		if($size['Size']['depth'] != '' && $size['Size']['width'] != '' && $size['Size']['height'] != '') {
-			$sizeString = $size['Size']['depth'].'x'.$size['Size']['width'].'x'.$size['Size']['height'];
+        // B x L
+		if($size['Size']['depth'] != '' && $size['Size']['width'] != '') {
+			$sizeString = $size['Size']['depth'].' x '.$size['Size']['width'];
 		}
 		
-		//Ã˜30x10/3cm
+		// B x L x H
 		if($size['Size']['depth'] != '' && $size['Size']['width'] != '' && $size['Size']['height'] != '') {
-			$sizeString = $size['Size']['depth'].'x'.$size['Size']['width'].'x'.$size['Size']['height'];
+			$sizeString = $size['Size']['depth'].' x '.$size['Size']['width'].' x '.$size['Size']['height'];
 		}
 		
+        // ØA, ØI, H
+		if($size['Size']['outer'] != '' && $size['Size']['inner'] != '' && $size['Size']['height'] != '') {
+			$sizeString = 'ØA:'.$size['Size']['outer'].', ØI:'.$size['Size']['inner'].', '.$size['Size']['height'];
+		}
+		
+        // Ø x L
+		if($size['Size']['outer'] != '' && $size['Size']['width'] != '') {
+			$sizeString = 'Ø'.$size['Size']['outer'].' x '.$size['Size']['width'];
+		}
+		
+        // B x L x H, ØI
+		if($size['Size']['depth'] != '' && $size['Size']['width'] != '' && $size['Size']['height'] != '' && $size['Size']['inner'] != '') {
+			$sizeString = $size['Size']['depth'].' x '.$size['Size']['width'].' x '.$size['Size']['height'].', ØI:'.$size['Size']['inner'];
+		}		
 		
 		if($sizeString == '') {
 			echo 'siehe Eigenschaften';
