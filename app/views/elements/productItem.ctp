@@ -9,6 +9,7 @@
 
 <div id="p<?php e($product['Product']['product_number']);?>" class="productListItem productListItem-<?php e($product['Category']['short']);?>">
 	<div class="productItemHeader"></div>
+    <?php debug(count($product['Image']));?>
     <div class="productItemCenter">
     	<div class="loader"><img src="<?php e($this->webroot.'img/ajax.gif'); ?>" alt="Ladevorgang"/></div>
     	<div class="productItemImage">	
