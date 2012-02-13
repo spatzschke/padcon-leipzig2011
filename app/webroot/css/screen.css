@@ -422,7 +422,7 @@ a:hover .categoryItemLeft, a:hover .categoryItemRight {
 .productListItem-op .productItemImage { background:url(../img/img_product/img_productItem-op.png) no-repeat 0 0 transparent; }
 .productListItem-rontgen .productItemImage { background:url(../img/img_product/img_productItem-rontgen.png) no-repeat 0 0 transparent; }
 .productListItem-notfall .productItemImage { background:url(../img/img_product/img_productItem-notfall.png) no-repeat 0 0 transparent; }
-.productListItem-baby .productItemImage { background:url(../img/img_product/img_productItem-baby.png) no-repeat 0 0 transparent; }
+.productListItem-baby .productItemImage { background:url(../img/img_product/img_productItem-mutter.png) no-repeat 0 0 transparent; }
 .productListItem-funktion .productItemImage { background:url(../img/img_product/img_productItem-funktion.png) no-repeat 0 0 transparent; }
 
 .productListItem .productItemImage img, .partnerListItem .partnerItemImage img{	
