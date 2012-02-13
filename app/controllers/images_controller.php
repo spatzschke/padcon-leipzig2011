@@ -28,7 +28,9 @@ class ImagesController extends AppController {
 	}
 
 	function add() {
-		if ($this->RequestHandler->isAjax()) { 
+		
+			
+		
 		  if (!empty($this->data)) {
 				
 				$product = $this->Product->find('first',array('conditions' => array('Product.product_number' => $this->data['product_number'])));
@@ -42,7 +44,6 @@ class ImagesController extends AppController {
 				$newImageData['Image']['ext'] = $this->data['ext'];
 				
 				if(empty($images)) {
-					debug($images);
 					
 					$this->Image->create();
 					if ($this->Image->save($newImageData)) {
@@ -60,21 +61,6 @@ class ImagesController extends AppController {
 		  $this->autoRender = false;
 		  
 		  exit;
-		}else {
-			if (!empty($this->data)) {
-				
-				if ($this->Image->save($this->data)) {
-					$this->Session->setFlash(__('The image has been saved', true));
-					$this->redirect(array('action' => 'index'));
-				} else {
-					$this->Session->setFlash(__('The image could not be saved. Please, try again.', true));
-				}
-			}
-			
-			$products = $this->Image->Product->find('list', array('fields' => array('product_number')));
-			$colors = $this->Image->Color->find('list');
-			$this->set(compact('products', 'colors')); 
-		}
 	}
 
 	function edit($id = null) {

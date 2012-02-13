@@ -68,9 +68,8 @@
 					 success:function (data, textStatus) {
 						 	$('#p'+response['data']['product_number']).find('.message').html();
 							$('#p'+response['data']['product_number']+' .productItemImage').find('img').attr('src',response['data']['path']+'t.'+response['data']['ext']+'?'+new Date().getTime());
-							$.colorbox.close(function() {
-								$('#p'+response['data']['product_number']).find('.loader').toggle();
-							});
+							$.colorbox.close();
+							$('#p'+response['data']['product_number']).find('.loader').hide();
 					 }, 
 					 
 					
