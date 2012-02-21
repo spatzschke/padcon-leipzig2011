@@ -1,6 +1,4 @@
 <div class="products">
-    <h1><?php  echo $products[0]['Category']['name'] ?></h1>
-
 	<?php
 		foreach ($products as $product):
 		
@@ -15,14 +13,14 @@
 		
 			$(".mediaURL").colorbox({
 				iframe:true, 
-				width:"292", 
-				height:"292", 
+				width:"810", 
+				height:"600", 
 				overlayClose: false,
 				onOpen: function () {
-					$(this).parent().parent().find('.loader').toggle();	
+					$(this).parent().parent().find('.loader').hide();	
 				},
 				onLoad: function() {
-    				$('#cboxClose').remove();
+    				//$('#cboxClose').remove();
 				}
 
 			});

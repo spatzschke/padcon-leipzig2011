@@ -1,6 +1,5 @@
 
 <div class="contact contactForm">
-<h1>Kontakt</h1>
 	<h2>Kontaktformular</h2>
 <?php echo $this->Form->create('SiteContent');?>
 	<?php
