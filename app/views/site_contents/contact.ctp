@@ -27,6 +27,6 @@
 	</div>
 	<h2>eMail</h2>
     <div class="static">
-    	info@padcon-leipzig.de
+    	<a href="mailto: info@padcon-leipzig.de">info(at)padcon-leipzig.de</a>
     </div>   
 </div>
