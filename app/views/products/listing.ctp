@@ -15,7 +15,7 @@
 				iframe:true, 
 				width:"810", 
 				height:"600", 
-				overlayClose: false,
+				overlayClose: true,
 				onOpen: function () {
 					$(this).parent().parent().find('.loader').hide();	
 				},

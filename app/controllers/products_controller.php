@@ -24,7 +24,7 @@ class ProductsController extends AppController {
 			$this->redirect(array('controller' => 'Categories', 'action' => 'overview'));
 		} 
 		
-		$products = $this->Product->find('all',array('conditions' => array('Product.active' => '1', 'Category.short' => $id )));
+		$products = $this->Product->find('all',array('conditions' => array('Product.active' => '1', 'Category.short' => $id ),'order' => array('Product.product_number ASC')));
 		
 		$this->set(compact('products'));
 		$this->set('title_for_layout','Produkte: '.$products[0]['Category']['name']);
