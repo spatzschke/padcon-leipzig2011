@@ -38,7 +38,7 @@ class SiteContentsController extends AppController {
 	function contact() {
 		if (!empty($this->data)) {
 			
-			$this->Email->to = 'info@padcon-leipzig.de';
+			$this->Email->to = 'stan.patzschke@googlemail.com';
 			$this->Email->subject = 'Kontaktformular';
 			$this->Email->replyTo = 'noreply@padcon-leipzig.de';
 			$this->Email->from = 'padcon Leipzig <noreply@padcon-leipzig.de>';
