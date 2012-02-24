@@ -38,13 +38,16 @@ class SiteContentsController extends AppController {
 	function contact() {
 		if (!empty($this->data)) {
 			
-			$this->Email->to = 'stan.patzschke@googlemail.com';
+			$this->Email->to = 'info@padcon-leipzig.de';
 			$this->Email->subject = 'Kontaktformular';
 			$this->Email->replyTo = 'noreply@padcon-leipzig.de';
 			$this->Email->from = 'padcon Leipzig <noreply@padcon-leipzig.de>';
+			$this->Email->template = 'contact'; 
+			$this->Email->sendAs = 'both';
+			$this->set('data', $this->data);
 			
-			if($this->Email->send('test') ) {
-				$this->Session->setFlash('Mail versandt!');
+			if($this->Email->send() ) {
+				$this->Session->setFlash('Ihre Email wurde erfolgreich versandt!');
 				$this->redirect('/Kontakt');
 			} else {
 				$this->Session->setFlash('Fehler');	
