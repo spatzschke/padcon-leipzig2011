@@ -18,7 +18,7 @@
     <div class="static">
     	padcon Leipzig <br />
     	Holunderweg 4 <br />
-    	04416 Markkleeerg <br />
+    	04416 Markkleeberg <br />
     </div>
     <h2>Telefon</h2>
     <div class="static">
